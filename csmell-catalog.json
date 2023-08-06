@@ -1,0 +1,1258 @@
+{
+ "architecture-by-osmosis": {
+  "id": "1",
+  "tagname": "architecture-by-osmosis",
+  "title": "Architecture by Osmosis",
+  "description": "Describes people making architecture decisions based on inappropriate information management. While some teammates manage and filter information through undefined communication channels or methods, others use different standards to document change requests.",
+  "refs": [
+   "Tamburri2019"
+  ],
+  "causes": [
+   [
+    "The effects of certain decisions reach clients and product operators but such decisions result in inoperable software.",
+    "Context"
+   ],
+   [
+    "Product is operating and clients report many inconsistencies.",
+    "Technical debt effect"
+   ],
+   [
+    "Operators, pushed by clients, share malcontent with developers and suggest technical changes.",
+    "Communication"
+   ],
+   [
+    "Developers evaluate (and sometimes partially implement) possible technical changes and suggest change to architecture decisions.",
+    "Communication"
+   ],
+   [
+    "Architects make necessary changes in decisions with knowledge that was partially filtered by all communication layers in the development network.",
+    "Coordination"
+   ]
+  ],
+  "effects": [
+   [
+    "Lack of vision",
+    "Cooperation"
+   ],
+   [
+    "Mistrust",
+    "Cooperation"
+   ],
+   [
+    "Decision localization",
+    "Communication"
+   ],
+   [
+    "Poor decision documentation",
+    "Communication"
+   ],
+   [
+    "Architecture erosion",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": []
+ },
+ "architecture-hood": {
+  "id": "2",
+  "tagname": "architecture-hood",
+  "title": "Architecture Hood",
+  "description": "Emerges when decision-making teams in charge of architecture decisions work remotely or distant from teammates. Developers cannot exchange communications with the software architects responsible for those decisions causing implementation problems.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Geographical and sociotechnical dispersion of architecture decisions",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Uncooperative behavior across the community",
+    "Cooperation"
+   ],
+   [
+    "Community Smell - Solution Defiance",
+    "Community smell"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Stand-up voting",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "black-cloud": {
+  "id": "3",
+  "tagname": "black-cloud",
+  "title": "Black Cloud",
+  "description": "This smell is present when organizations do not provide the conditions for social interactions and effective communication between teammates. Thus, the conditions do not support the exchange of knowledge during software development processes, e.g., professional experience or understanding of projects in progress.",
+  "refs": [
+   "Tamburri2015",
+   "Palomba2021"
+  ],
+  "causes": [
+   [
+    "Lack of boundary spanners",
+    "Communication"
+   ],
+   [
+    "Lack of sharing protocols",
+    "Communication"
+   ],
+   [
+    "Lack of sharing initiatives",
+    "Communication"
+   ]
+  ],
+  "effects": [
+   [
+    "Decision localization",
+    "Communication"
+   ],
+   [
+    "Unsanctioned initiative, e.g., people taking matters and decisions in their own hands",
+    "Cooperation"
+   ],
+   [
+    "Rise of egotistic behavior that leads to the inception of Organizational Silo",
+    "Cooperation"
+   ],
+   [
+    "Information obfuscation",
+    "Communication"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Create communication plan",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Social wiki",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "class-cognition": {
+  "id": "4",
+  "tagname": "class-cognition",
+  "title": "Class Cognition",
+  "description": "This smell describe when a refactoring makes the modular structures and refactored classes more difficult to understand. Thus, other teammates, including current developers and newcomers, spend time and effort understanding the new environment version and file locations .",
+  "refs": [
+   "Palomba2021"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "Modular structure and refactored classes are more difficult to understand and contribute for newcomers.",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": []
+ },
+ "code-red": {
+  "id": "5",
+  "tagname": "code-red",
+  "title": "Code Red",
+  "description": "Denoting the existence of highly complex classes. Thus, a limited number of developers, 1\u00e2\u20ac\u201c2 people at most, can manage such classes.",
+  "refs": [
+   "Palomba2021"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "Extremely complex classes that can be managed by 1-2 people at most.",
+    "Technical debt effect, Coordination"
+   ]
+  ],
+  "refactoring": []
+ },
+ "cognitive-distance": {
+  "id": "6",
+  "tagname": "cognitive-distance",
+  "title": "Cognitive Distance",
+  "description": "In software engineering, it is the distance that developers perceive on the physical, technical, social, and cultural levels concerning peers with considerable background differences.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Experience diversity",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Decision localization",
+    "Communication"
+   ],
+   [
+    "Wasted time",
+    "Context"
+   ],
+   [
+    "Wasted operations resources",
+    "Coordination"
+   ],
+   [
+    "Lack of an optimal understanding across different operations areas",
+    "Cognition"
+   ],
+   [
+    "Misinterpretation of expectations",
+    "Cognition"
+   ],
+   [
+    "Pitting newbies versus experts",
+    "Conflict"
+   ],
+   [
+    "Faulty or smelly code",
+    "Technical debt effect"
+   ],
+   [
+    "Additional development costs",
+    "Economic effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architecture knowledge exchange through redocumentation, workshops, and presentations",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Architect-as-a-coach",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Cross-functional and community-wide review of code, designs, and operations procedures",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Designing an architecture on the basis of the perceived cognitive distance",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Professional communication intermediaries",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Stimulating engagement in newcomers, and designing architecture to accommodate buddy pairing",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "cookbook-development": {
+  "id": "7",
+  "tagname": "cookbook-development",
+  "title": "Cookbook Development",
+  "description": "Developers are stuck in how they usually work according to old-framework-based cookbooks. They do not accept innovative ideas or new ways of working that change their comfort zones. Consequently, software product features do not fulfill customer\u00e2\u20ac\u2122s expectations.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Thinking in an old framework",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Mismatched expectations between customers and the rest of the community",
+    "Cooperation"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Expectation management, and managers and architects using knowledge brokers to disseminate and oversee expectations",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Using agile methods: in particular, employing the protecting and interface role of Scrum master",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "devops-clash": {
+  "id": "8",
+  "tagname": "devops-clash",
+  "title": "DevOps Clash",
+  "description": "Describes clashes between development and operations teams from multiple geographical locations with contractual obligations to either development or operations activities. These clashes lead to a slower development process and ineffective operations.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Geographic dispersion",
+    "Context, Culture"
+   ]
+  ],
+  "effects": [
+   [
+    "Slower development",
+    "Coordination"
+   ],
+   [
+    "Ineffective operations",
+    "Coordination"
+   ],
+   [
+    "The inability to bridge between different thought worlds across development and operations \"Stickiness\" of knowledge transfer",
+    "Communication"
+   ],
+   [
+    "Clashes between the development and operations cultures",
+    "Conflict, Culture"
+   ],
+   [
+    "Increased project costs",
+    "Economic effect"
+   ],
+   [
+    "Lack of trust-building",
+    "Cooperation"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Community-wide engagement, including operations staff, clients, and user panels",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Knowledge brokers and a new service or community coordinator for efficient working",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Nearshoring",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Standardization of software design and implementation, then separation between development and operations, and then operations offshoring",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "disengagement": {
+  "id": "9",
+  "tagname": "disengagement",
+  "title": "Disengagement",
+  "description": "Describes a situation where developers think the software product is mature enough. Then they send it to operations technicians even though the software is unfinished. This circumstance reflects a lack of curiosity from the developers\u00e2\u20ac\u2122 side, ending in missing software features or applying wild assumptions.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Lack of engagement in development",
+    "Coordination"
+   ],
+   [
+    "Lack of curiosity",
+    "Cooperation"
+   ]
+  ],
+  "effects": [
+   [
+    "Wild assumptions",
+    "Cognition"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Designing a people-oriented rather than feature-oriented architecture",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "DevOps shift-left approach to address earlier development issues and having operations staff also act as developers",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "dispersion": {
+  "id": "10",
+  "tagname": "dispersion",
+  "title": "Dispersion",
+  "description": "This community smell concerns a fix or refactoring that causes the fragmentation of an existing group, working in or being part of a collaboration network. Functionality rearrangements also lead to haphazard work. Finally, coordinating and carrying out maintenance activities is more challenging.",
+  "refs": [
+   "Palomba2021"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "Fragmentation of a previously existing group or modularized collaboration structure in the community",
+    "Composition"
+   ],
+   [
+    "Haphazard work",
+    "Coordination"
+   ],
+   [
+    "Normal maintenance activities in the community are more difficult to carry out and coordinate",
+    "Technical debt effect, Coordination"
+   ]
+  ],
+  "refactoring": []
+ },
+ "dissensus": {
+  "id": "11",
+  "tagname": "dissensus",
+  "title": "Dissensus",
+  "description": "Describes the inability to achieve consensus on how to proceed despite repeated attempts at doing it.",
+  "refs": [
+   "Palomba2021"
+  ],
+  "causes": [
+   [
+    "Inability to achieve consensus on how to proceed despite repeated attempts at it",
+    "Conflict"
+   ]
+  ],
+  "effects": [
+   [
+    "Code smell remains as-is or teams are unable to find a common solution",
+    "Technical debt effect, Conflict"
+   ]
+  ],
+  "refactoring": []
+ },
+ "hyper-community": {
+  "id": "12",
+  "tagname": "hyper-community",
+  "title": "Hyper Community",
+  "description": "Refers to a highly connected community sensible to groupthink. It also influences smaller subcommunities in its network. Consequently, it leads to social turbulence and faulty software components.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "Increased turbulence",
+    "Conflict"
+   ],
+   [
+    "Buggy software",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architect-as-a-coach",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Inciting doubt through discussion and reverse logic",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "informality-excess": {
+  "id": "13",
+  "tagname": "informality-excess",
+  "title": "Informality Excess",
+  "description": "Excessive informality is the relative absence of information management and control protocols. These conditions lead to information spillover and low accountability of teammates.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Relative absence of information management and control protocols",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Low accountability of both development and operations staff",
+    "Context"
+   ],
+   [
+    "Information spillover",
+    "Communication"
+   ]
+  ],
+  "refactoring": []
+ },
+ "institutional-isomorphism": {
+  "id": "14",
+  "tagname": "institutional-isomorphism",
+  "title": "Institutional Isomorphism",
+  "description": "Describes the similarity of processes or structures of one software development group or sub-community to those of another. This condition can be the result of imitation or independent development under the same constraints. The effects can include lack of innovation, stagnancy, and communication.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Excessive conformity to standards",
+    "Context"
+   ],
+   [
+    "Lack of innovation",
+    "Context"
+   ],
+   [
+    "Using a formal structure to achieve community goals",
+    "Context"
+   ],
+   [
+    "Rigid thinking from different parts of the community",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "A negative impact on team spirit",
+    "Cooperation"
+   ],
+   [
+    "Lack of innovation",
+    "Context"
+   ],
+   [
+    "Stagnation",
+    "Cooperation"
+   ],
+   [
+    "Lack of collaboration",
+    "Coordination"
+   ],
+   [
+    "Lack of communication",
+    "Communication"
+   ],
+   [
+    "A less flexible or static product",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Daily stand-ups, and keeping track of actions, agreements, and expectations through work-division artifacts",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Open communication and informality, and model-based mediation of knowledge",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "invisible-architecting": {
+  "id": "15",
+  "tagname": "invisible-architecting",
+  "title": "Invisible Architecting",
+  "description": "This smell describes a situation in which teammates document software architecture decisions and register meeting agreements inconsistently. Consequently, the descriptions of such decisions, necessary for the software architecture process, become invisible. The lack of accurate information generates, for example, decision unawareness and conflicts among teammates.",
+  "refs": [
+   "Tamburri2019"
+  ],
+  "causes": [
+   [
+    "Architecture decisions are made or changed rapidly",
+    "Coordination"
+   ],
+   [
+    "Architecture documents are not used properly and/or few architects are present.",
+    "Coordination"
+   ],
+   [
+    "Architecture decisions are too big to implement and new team is added to the development network to implement the changes",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Decision unawareness",
+    "Cognition"
+   ],
+   [
+    "Product version and architecture misalignment",
+    "Technical debt effect"
+   ],
+   [
+    "Community Smell - Solutions Defiance",
+    "Community smell"
+   ],
+   [
+    "Time waste",
+    "Context"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architecture board ",
+    "ref": "Tamburri2019"
+   }
+  ]
+ },
+ "leftover-techie": {
+  "id": "16",
+  "tagname": "leftover-techie",
+  "title": "Leftover Techie",
+  "description": "This smell consists of a broken collaborative network. Also, there is no effective communication between developers and technicians (e.g., help desk, operation, and maintenance). The technicians are not usually involved in multiple aspects of the software development process to have a shared knowledge of software features.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Increased isolation between development and operations people",
+    "Coordination"
+   ]
+  ],
+  "effects": [
+   [
+    "Seemingly egotistical behavior for knowledge and status awareness sharing",
+    "Cooperation"
+   ],
+   [
+    "General lack of trust in technicians in sharing results and current status",
+    "Cooperation"
+   ],
+   [
+    "Lack of communication or miscommunication",
+    "Communication"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Full circle",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "lone-wolf": {
+  "id": "17",
+  "tagname": "lone-wolf",
+  "title": "Lone Wolf",
+  "description": "Describes when defiant teammates carry out their work irrespective or regardless of their peers. This smell reflects poor communication addressing project needs. The effects are, for instance, unsanctioned architecture decisions across the development process, code smells, and project delays.",
+  "refs": [
+   "Catolino2019",
+   "Tamburri2021"
+  ],
+  "causes": [
+   [
+    "Absence of communication with one of the developers who prefer working independently from the others",
+    "Communication"
+   ]
+  ],
+  "effects": [
+   [
+    "Unsanctioned architectural decisions made by contributors who carry out their work irrespective or regardless of their peers",
+    "Cooperation"
+   ],
+   [
+    "Software developers exhibiting uncooperative behavior",
+    "Cooperation"
+   ],
+   [
+    "Software developers exhibiting mistrust",
+    "Cooperation"
+   ],
+   [
+    "Developer free-riding",
+    "Community smell"
+   ],
+   [
+    "Side effects generated due to Organizational Silo (communication decay and negative influence on developer awareness)",
+    "Community smell"
+   ],
+   [
+    "Delays due to Organizational Silo and Lone Wolf simultaneously",
+    "Coordination"
+   ],
+   [
+    "Code duplication",
+    "Technical debt effect"
+   ],
+   [
+    "Code churn",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Mentoring",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Restructure the community",
+    "ref": "Catolino2020"
+   }
+  ]
+ },
+ "lonesome-architecting": {
+  "id": "18",
+  "tagname": "lonesome-architecting",
+  "title": "Lonesome Architecting",
+  "description": "Non-architect teammates see the need to make architecture decisions because the current architects are too few and far apart. These non-architects make decisions without consulting with experts involved in such decisions. From a social perspective, developers are unaware of what they are doing. Also, this scenario leads to incompatibility problems and faster decision-making.",
+  "refs": [
+   "Tamburri2019"
+  ],
+  "causes": [
+   [
+    "Architects are too few and far apart.",
+    "Context"
+   ],
+   [
+    "Non architects are forced to make decisions.",
+    "Composition"
+   ],
+   [
+    "Not enough time dedicated to disseminating decision and related changes",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Time waste",
+    "Context"
+   ],
+   [
+    "Decision unawareness",
+    "Cognition"
+   ],
+   [
+    "Lack of awareness on the product's needs",
+    "Cognition"
+   ],
+   [
+    "Overly fast decision-making to \"patch-up\"",
+    "Context"
+   ],
+   [
+    "Misalignment between product version and architecture",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architecture board ",
+    "ref": "Tamburri2019"
+   }
+  ]
+ },
+ "newbie-free-riding": {
+  "id": "19",
+  "tagname": "newbie-free-riding",
+  "title": "Newbie Free-Riding",
+  "description": "Newcomer teammates must understand by themselves what to do and for whom, which leads to the free-riding of older employees. This unfriendly work environment adds more pressure to the team and  affects people\u00e2\u20ac\u2122s psychological state.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "High work pressure",
+    "Context"
+   ],
+   [
+    "Irritation",
+    "Conflict"
+   ],
+   [
+    "Demotivation of non-senior members",
+    "Conflict"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Coordination management and engagement creation",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Explicit empowerment of architecture decision changes",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Organizational monitoring\u00e2\u20ac\u201dfor example, anonymous mood polling",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "obfuscated-architecting": {
+  "id": "20",
+  "tagname": "obfuscated-architecting",
+  "title": "Obfuscated Architecting",
+  "description": "It occurs when multiple subteams of a development network lack the organizational and the socio-technical vision required for harmonized operations. For instance, projects need new developers to implement changes to legacy and new products. However, newcomers included in projects lack the technical background to deal with legacy products.",
+  "refs": [
+   "Tamburri2019"
+  ],
+  "causes": [
+   [
+    "Legacy and new product are operating together or being integrated",
+    "Composition"
+   ],
+   [
+    "New architecture decisions imply implementation changes that necessitate new people to be included in the development network",
+    "Composition"
+   ],
+   [
+    "New people do not have the needed \"legacy\" frame of mind",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Time waste",
+    "Context"
+   ],
+   [
+    "Single communication points for architecture decisions",
+    "Communication"
+   ],
+   [
+    "Sociotechnical code churn",
+    "Technical debt effect"
+   ],
+   [
+    "Developers frustration",
+    "Context"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architecture board ",
+    "ref": "Tamburri2019"
+   }
+  ]
+ },
+ "organizational-silo": {
+  "id": "21",
+  "tagname": "organizational-silo",
+  "title": "Organizational Silo",
+  "description": "This community smell is associated with task coordination problems. Software development tasks are sometimes not interconnected with each other. This smell sets challenges to check task dependencies and non-conducive conditions for effective communication among teammates performing tasks. This scenario puts the socio-technical congruence at risk.",
+  "refs": [
+   "Tamburri2015",
+   "Tamburri2021"
+  ],
+  "causes": [
+   [
+    "High decoupling between tasks",
+    "Coordination"
+   ],
+   [
+    "Lack of communication",
+    "Communication"
+   ],
+   [
+    "Lack of cooperation in checking task dependencies",
+    "Coordination"
+   ]
+  ],
+  "effects": [
+   [
+    "Community Smell - Solutions Defiance",
+    "Community smell"
+   ],
+   [
+    "Tunnel vision with a consequent lack of creativity and lack of cooperation",
+    "Cooperation"
+   ],
+   [
+    "Tunnel vision with a consequent lack of collaboration",
+    "Coordination"
+   ],
+   [
+    "Developers make architecture decisions on their own without the necessary background and premises",
+    "Cooperation"
+   ],
+   [
+    "Developers make architecture decisions on their own using different format every time",
+    "Cooperation"
+   ],
+   [
+    "Community filled with wasted resources e.g., time",
+    "Context"
+   ],
+   [
+    "Decaying communication across sub-communities and consequent negative effects on developers situational awareness",
+    "Communication"
+   ],
+   [
+    "Duplication of code",
+    "Technical debt effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Create communication plan",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Social wiki",
+    "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Mentoring",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Restructure the community",
+    "ref": "Catolino2020"
+   }
+  ]
+ },
+ "organizational-skirmish": {
+  "id": "22",
+  "tagname": "organizational-skirmish",
+  "title": "Organizational Skirmish",
+  "description": "An organizational skirmish is a scenario where teams have differences over their organizational cultures. It makes the work of project managers difficult. The impact is notorious on productivity.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Different communication level",
+    "Communication"
+   ],
+   [
+    "Different expertise level",
+    "Composition"
+   ],
+   [
+    "Organizational change",
+    "Context"
+   ],
+   [
+    "Different business processes",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Project delay",
+    "Coordination"
+   ],
+   [
+    "Project failure",
+    "Coordination"
+   ]
+  ],
+  "refactoring": []
+ },
+ "power-distance": {
+  "id": "23",
+  "tagname": "power-distance",
+  "title": "Power Distance",
+  "description": "The distance that less powerful software development teammates perceive with those power-holder teammates (experienced teammates or decision-makers). It finally disrupts the software process and impacts organizational finances.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Lack of architecture knowledge sharing",
+    "Communication"
+   ]
+  ],
+  "effects": [
+   [
+    "Additional project costs",
+    "Economic effect"
+   ],
+   [
+    "Financial loss",
+    "Economic effect"
+   ],
+   [
+    "Lost bids",
+    "Economic effect"
+   ]
+  ],
+  "refactoring": []
+ },
+ "priggish-members": {
+  "id": "24",
+  "tagname": "priggish-members",
+  "title": "Priggish Members",
+  "description": "They are pedant teammates demanding of others pointlessly precise conformity or exaggerated propriety, which is annoying. The attitude frustrates teammates and affects the software process.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [],
+  "effects": [
+   [
+    "Additional project costs",
+    "Economic effect"
+   ],
+   [
+    "Frustrated team members",
+    "Context"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Harmonizing responsibilities, and using Scrum and agile methods",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "prima-donnas": {
+  "id": "25",
+  "tagname": "prima-donnas",
+  "title": "Prima Donnas",
+  "description": "This smell indicates the presence of teammates working in isolation. They are unwilling to welcome the change of legacy products and support from other teammates. These teammates prevent the organization from innovative solutions or processes and effective communication and collaboration.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Innovation inertia",
+    "Context"
+   ],
+   [
+    "Organizational inertia",
+    "Context"
+   ],
+   [
+    "Irreceptiveness to changes/support",
+    "Cooperation"
+   ],
+   [
+    "Community Smell - Organizational Silo",
+    "Community smell"
+   ]
+  ],
+  "effects": [
+   [
+    "Lack of collaboration",
+    "Coordination"
+   ],
+   [
+    "Lack of communication",
+    "Communication"
+   ],
+   [
+    "Seemingly condescending and egotistical behavior",
+    "Cooperation"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Social wiki",
+    "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Culture conveyors ",
+    "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Community-based contingency planning ",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "radio-silence-bottleneck": {
+  "id": "26",
+  "tagname": "radio-silence-bottleneck",
+  "title": "Radio Silence or Bottleneck",
+  "description": "It is a scenario where leaders and teammates perform tasks in very formal and complex organizations. Under these conditions, team communication structures are not conducive to spread information across the teams efficiently. For instance, a person working as a unique information intermediary for different teams leads to communication overload and massive delays.",
+  "refs": [
+   "Tamburri2015",
+   "Tamburri2021"
+  ],
+  "causes": [
+   [
+    "Highly formal and complex organizational structure",
+    "Context"
+   ],
+   [
+    "Proposed changes within every software development phase require an extraordinary quantity of time to be implemented",
+    "Coordination"
+   ],
+   [
+    "Time waste",
+    "Context"
+   ],
+   [
+    "Hidden or counterintuitive information (and broker) locations",
+    "Communication"
+   ],
+   [
+    "Highly regularized procedures",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Communication delays, i.e., answering critical emails or posts",
+    "Communication"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Create communication plan",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Mentoring",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Cohesion Exercising",
+    "ref": "Catolino2020"
+   },
+   {
+    "strategy": "Learning community",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "sharing-villainy": {
+  "id": "27",
+  "tagname": "sharing-villainy",
+  "title": "Sharing Villainy",
+  "description": "This community smell depicts work environments where the goal of sharing reliable knowledge or information is a challenge. Organizations do not provide the expected conditions for knowledge sharing, like opportunities for meetings and incentives. Hence, some teammates do not see knowledge sharing as a productive activity for projects\u00e2\u20ac\u2122 completion.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Lack of incentive to value knowledge sharing",
+    "Context"
+   ],
+   [
+    "Lack of activities promoting useful knowledge sharing and synch",
+    "Context"
+   ]
+  ],
+  "effects": [
+   [
+    "Undefined information flow",
+    "Communication"
+   ],
+   [
+    "Lower engagement in the community in knowledge sharing e.g., the shared information is outdated, unconfirmed or wrong",
+    "Cooperation"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Social wiki",
+    "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Culture conveyors ",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "solution-defiance": {
+  "id": "28",
+  "tagname": "solution-defiance",
+  "title": "Solution Defiance",
+  "description": "This smell describes conflicts between teams. Teammates with similar deep-level factors (e.g., technical background) and organizational cultural beliefs (e.g., values and norms) create subteams. Then they go into conflicts in decision-making meetings since every group supports their opinions on potential solutions.",
+  "refs": [
+   "Tamburri2015"
+  ],
+  "causes": [
+   [
+    "Homophile groups",
+    "Composition, Culture"
+   ]
+  ],
+  "effects": [
+   [
+    "Uncooperative behavior",
+    "Cooperation"
+   ],
+   [
+    "Ignoring decisions",
+    "Conflict"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Social wiki",
+    "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Community-based contingency planning ",
+    "ref": "Tamburri2015"
+   }
+  ]
+ },
+ "time-warp": {
+  "id": "29",
+  "tagname": "time-warp",
+  "title": "Time Warp",
+  "description": "After changes in organizational structures and processes, experienced teammates wrongly assume time frames for exchanging communications and no need for explicit coordination. Some effects of this community smell are unsatisfied customers and faulty software.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Experience diversity",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Low software architecture quality",
+    "Technical debt effect"
+   ],
+   [
+    "Malfunctioning software or code smells",
+    "Technical debt effect"
+   ],
+   [
+    "Losing face in the community",
+    "Context"
+   ],
+   [
+    "Unsolved operations issues",
+    "Coordination"
+   ],
+   [
+    "Unsatisfied customers",
+    "Economic effect"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Architect-as-a-coach",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Better syncing of coordination and communication of architecture decisions and better time estimation or evidence-based scheduling",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "Devoting more resources to risk engineering",
+    "ref": "Tamburri2016"
+   }
+  ]
+ },
+ "unlearning": {
+  "id": "30",
+  "tagname": "unlearning",
+  "title": "Unlearning",
+  "description": "Components of training courses (e.g., technological innovations and best practices) become unfeasible learning material when it is shared with older teammates. These teammates show a very high experience diversity. Consequently, the updated accumulated knowledge is at risk of being gradually lost.",
+  "refs": [
+   "Tamburri2016"
+  ],
+  "causes": [
+   [
+    "Experience diversity",
+    "Composition"
+   ]
+  ],
+  "effects": [
+   [
+    "Lack of engagement",
+    "Cooperation"
+   ],
+   [
+    "Gradual loss of the new knowledge or best practices",
+    "Cognition, Communication"
+   ]
+  ],
+  "refactoring": [
+   {
+    "strategy": "Ad hoc individual training for the more experienced developers",
+    "ref": "Tamburri2016"
+   },
+   {
+    "strategy": "More active organizational approaches and resources for architecture knowledge sharing",
+    "ref": "Tamburri2016"
+   }
+  ]
+ }
+}
