@@ -52,16 +52,16 @@
 						<a class="nav-link {% if title=='Home' %}active{% endif %}" href="{{ url_for('index') }}"><i class="fas fa-home fa-fw me-2"></i>Home <!--<span class="sr-only">(current)</span>--></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('community_smells') }}"><i class="fas fa-share-alt fa-fw me-2"></i>Community Smells</a>
+						<a class="nav-link {% if title=='Community Smells' or title.endswith('Community Smell') %}active{% endif %}" href="{{ url_for('community_smells') }}"><i class="fas fa-share-alt fa-fw me-2"></i>Community Smells</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('tools') }}"><i class="fas fa-wrench fa-fw me-2"></i>Tools</a>
+						<a class="nav-link {% if title=='Tools' %}active{% endif %}" href="{{ url_for('tools') }}"><i class="fas fa-wrench fa-fw me-2"></i>Tools</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('references') }}"><i class="fas fa-bookmark fa-fw me-2"></i>References</a>
+						<a class="nav-link {% if title=='References' %}active{% endif %}" href="{{ url_for('references') }}"><i class="fas fa-bookmark fa-fw me-2"></i>References</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('about') }}"><i class="fas fa-user fa-fw me-2"></i>About</a>
+						<a class="nav-link {% if title=='About' %}active{% endif %}" href="{{ url_for('about') }}"><i class="fas fa-user fa-fw me-2"></i>About</a>
 					</li>
 				</ul>
 

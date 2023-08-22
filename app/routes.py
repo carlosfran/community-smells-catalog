@@ -47,26 +47,7 @@ def clean_factors(factors):
 @app.route('/')
 @app.route('/index')
 def index():
-    smells = get_catalog()
-
-    page = request.args.get('page', 1, type=int)
-    per_page = app.config['SMELL_PER_PAGE']
-    max_page = int(app.config['TOTAL_SMELL']/app.config['SMELL_PER_PAGE'])
-
-    keys = list(smells.keys())
-    total = page * per_page
-    start = (page-1) * per_page
-
-    prev_page = max(1, page-1)
-    next_page = page+1
-
-    page_keys = keys[start:total]
-    page_smells = {}
-    for k in page_keys:
-        page_smells[k] = smells[k]
-
-    return render_template('index.html', title='Home', smells=page_smells,
-                            prev_page=prev_page, next_page=next_page, max_page=max_page)
+    return render_template('index.html', title='Home')
 
 
 @app.route('/tools')
@@ -83,31 +64,20 @@ def about():
 def references():
     bibtex = get_library()
 
-    return render_template('references.html', references=bibtex.entries)
+    return render_template('references.html', title='References', references=bibtex.entries)
 
 
 @app.route('/community-smells')
 def community_smells():
     smells = get_catalog()
+    ordenados = {}
+    for key in smells.keys():
+        if key[0] in ordenados.keys():
+            ordenados[key[0]].append(smells[key])
+        else:
+            ordenados[key[0]] = [smells[key]]
 
-    page = request.args.get('page', 1, type=int)
-    per_page = app.config['SMELL_PER_PAGE']
-    max_page = int(app.config['TOTAL_SMELL']/app.config['SMELL_PER_PAGE'])
-
-    keys = list(smells.keys())
-    total = page * per_page
-    start = (page-1) * per_page
-
-    prev_page = max(1, page-1)
-    next_page = page+1
-
-    page_keys = keys[start:total]
-    page_smells = {}
-    for k in page_keys:
-        page_smells[k] = smells[k]
-
-    return render_template('home.html', title='Community Smells', smells=page_smells,
-                            prev_page=prev_page, next_page=next_page, max_page=max_page)
+    return render_template('home.html', title='Community Smells', smells=ordenados)
 
 
 @app.route('/smell/<tagname>')
@@ -149,7 +119,7 @@ def smell(tagname=None):
     if id<30:
         next_smell = keys[ id ]
 
-    return render_template('smell.html', title=smell['title'], smell=smell, cause_codes=cause_codes,
+    return render_template('smell.html', title=smell['title'] + ' Community Smell', smell=smell, cause_codes=cause_codes,
                            effect_codes=effect_codes, references=references, prev_smell=prev_smell, next_smell=next_smell)
 
 

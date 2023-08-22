@@ -18,22 +18,30 @@
             </div>--><!--//single-form-max-width-->
         </div><!--//container-->
     </section>
+
+
     <section class="blog-list px-3 py-5 p-md-5">
         <div class="container single-col-max-width">
-        {% for key in smells.keys() %}
         <div class="item mb-5">
             <div class="row g-3 g-xl-0">
-                <div class="col-2 col-xl-3">
-                    <img class="img-fluid post-thumb " src="{{ url_for('static', filename='assets/images/blog/blog-post-thumb-1.jpg') }}" alt="image">
-                </div>
                 <div class="col">
-                    <h3 class="title mb-1"><a class="text-link" href="{{ url_for('smell', tagname=smells[key]['tagname']) }}">{{ smells[key]['title'] }}</a></h3>
+                    {% for letra in smells.keys() %}
+                    <h3 class="title mb-1">{{ letra|upper }}</h3>
                     <div class="meta mb-1"><!--<span class="date">Published 2 days ago</span><span class="time">5 min read</span><span class="comment"><a class="text-link" href="#">8 comments</a></span>--></div>
-                    <div class="intro">{{ smells[key]['description'] }}</div>
-                    <a class="text-link" href="{{ url_for('smell', tagname=smells[key]['tagname']) }}">Read more &rarr;</a>
+                    <div class="intro mb-1">
+                        <ul>
+                            {% for smell in smells[letra] %}
+                            <li><a href="{{ url_for('smell', tagname=smell['tagname']) }}">{{ smell['title'] }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+
                 </div><!--//col-->
             </div><!--//row-->
         </div><!--//item-->
+
+
         <!--<div class="item mb-5">
             <div class="row g-3 g-xl-0">
                 <div class="col-2 col-xl-3">
@@ -104,16 +112,8 @@
                 </div>&lt;!&ndash;//col&ndash;&gt;
             </div>&lt;!&ndash;//row&ndash;&gt;
         </div>&lt;!&ndash;//item&ndash;&gt;-->
-        {% endfor %}
 
-        <nav class="blog-nav nav nav-justified my-5">
-            {% if next_page>=3 %}
-            <a class="nav-link-prev nav-item nav-link rounded-left" href="{{ url_for('index', page=prev_page) }}">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-            {% endif %}
-            {% if next_page<=max_page %}
-            <a class="nav-link-next nav-item nav-link rounded" href="{{ url_for('index', page=next_page) }}">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-            {% endif %}
-        </nav>
+        <nav class="blog-nav nav nav-justified my-5"></nav>
         </div>
     </section>
 {% endblock %}
