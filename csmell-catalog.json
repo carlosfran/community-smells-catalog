@@ -91,7 +91,11 @@
   "description": "This smell is present when organizations do not provide the conditions for social interactions and effective communication between teammates. Thus, the conditions do not support the exchange of knowledge during software development processes, e.g., professional experience or understanding of projects in progress.",
   "refs": [
    "Tamburri2015",
-   "Palomba2021"
+   "Catolino2020",
+   "Palomba2021",
+   "Sarmento2022",
+   "Tahsin2022",
+   "Lambiase2022"
   ],
   "causes": [
    [
@@ -105,6 +109,14 @@
    [
     "Lack of sharing initiatives",
     "Communication"
+   ],
+   [
+    "Geographic dispersion",
+    "Context, Culture"
+   ],
+   [
+    "Gender balance (males and females) between team members",
+    "Composition"
    ]
   ],
   "effects": [
@@ -128,11 +140,19 @@
   "refactoring": [
    {
     "strategy": "Create communication plan",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Social wiki",
     "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Restructure the community",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Introduce a social sanctioning mechanism",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    }
   ]
  },
@@ -625,7 +645,11 @@
   "description": "Describes when defiant teammates carry out their work irrespective or regardless of their peers. This smell reflects poor communication addressing project needs. The effects are, for instance, unsanctioned architecture decisions across the development process, code smells, and project delays.",
   "refs": [
    "Catolino2019",
-   "Tamburri2021"
+   "Catolino2020",
+   "Tamburri2021",
+   "Sarmento2022",
+   "Tahsin2022",
+   "Lambiase2022"
   ],
   "causes": [
    [
@@ -669,12 +693,32 @@
   ],
   "refactoring": [
    {
+    "strategy": "Create communication plan",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
     "strategy": "Mentoring",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Restructure the community",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Cohesion Exercising",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Monitoring closely how team members communicate and share information.",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Introduce a social sanctioning mechanism",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Termination - if lone wolf member remains the same even after mentoring, they are terminated",
+    "ref": "Tahsin2022"
    }
   ]
  },
@@ -733,7 +777,7 @@
   "id": "19",
   "tagname": "newbie-free-riding",
   "title": "Newbie Free-Riding",
-  "description": "Newcomer teammates must understand by themselves what to do and for whom, which leads to the free-riding of older employees. This unfriendly work environment adds more pressure to the team and  affects people\u00e2\u20ac\u2122s psychological state.",
+  "description": "Newcomer teammates must understand by themselves what to do and for whom, which leads to the free-riding of older employees. This unfriendly work environment adds more pressure to the team and affects people\u00e2\u20ac\u2122s psychological state.",
   "refs": [
    "Tamburri2016"
   ],
@@ -821,9 +865,17 @@
   "description": "This community smell is associated with task coordination problems. Software development tasks are sometimes not interconnected with each other. This smell sets challenges to check task dependencies and non-conducive conditions for effective communication among teammates performing tasks. This scenario puts the socio-technical congruence at risk.",
   "refs": [
    "Tamburri2015",
-   "Tamburri2021"
+   "Tamburri2021",
+   "Catolino2020",
+   "Sarmento2022",
+   "Tahsin2022",
+   "Lambiase2022"
   ],
   "causes": [
+   [
+    "Geographic dispersion",
+    "Context, Culture"
+   ],
    [
     "High decoupling between tasks",
     "Coordination"
@@ -835,6 +887,10 @@
    [
     "Lack of cooperation in checking task dependencies",
     "Coordination"
+   ],
+   [
+    "Low team turnover can lead to a division in consolidated sub-communities",
+    "Composition"
    ]
   ],
   "effects": [
@@ -874,7 +930,7 @@
   "refactoring": [
    {
     "strategy": "Create communication plan",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Social wiki",
@@ -882,11 +938,23 @@
    },
    {
     "strategy": "Mentoring",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Restructure the community",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Cohesion Exercising",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Monitoring closely how team members communicate and share information.",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Introduce a social-rewarding mechanism",
+    "ref": "Catolino2020, Sarmento2022"
    }
   ]
  },
@@ -1046,9 +1114,17 @@
   "description": "It is a scenario where leaders and teammates perform tasks in very formal and complex organizations. Under these conditions, team communication structures are not conducive to spread information across the teams efficiently. For instance, a person working as a unique information intermediary for different teams leads to communication overload and massive delays.",
   "refs": [
    "Tamburri2015",
-   "Tamburri2021"
+   "Tamburri2021",
+   "Catolino2020",
+   "Sarmento2022",
+   "Tahsin2022",
+   "Lambiase2022"
   ],
   "causes": [
+   [
+    "Geographic dispersion",
+    "Context, Culture"
+   ],
    [
     "Highly formal and complex organizational structure",
     "Context"
@@ -1068,6 +1144,14 @@
    [
     "Highly regularized procedures",
     "Context"
+   ],
+   [
+    "Gender balance (males and females) between team members",
+    "Composition"
+   ],
+   [
+    "High team turnover - the constant introduction of new contributors might lead to communication problems",
+    "Communication"
    ]
   ],
   "effects": [
@@ -1079,19 +1163,31 @@
   "refactoring": [
    {
     "strategy": "Create communication plan",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Mentoring",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Restructure the community",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Cohesion Exercising",
-    "ref": "Catolino2020"
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    },
    {
     "strategy": "Learning community",
     "ref": "Tamburri2015"
+   },
+   {
+    "strategy": "Monitoring closely how team members communicate and share information.",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
+   },
+   {
+    "strategy": "Introduce a social sanctioning mechanism",
+    "ref": "Catolino2020, Sarmento2022, Tahsin2022"
    }
   ]
  },
